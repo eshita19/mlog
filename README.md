@@ -12,6 +12,18 @@
     
 ## logback
    - https://stackify.com/logging-logback/
+   - Advantages:
+     - Parameterized messages, no need of String concatenation.
+     - compresssion of log files.
+     - support of sl4j inbuilt.
+     - supoort for filters(Level, Threshold, Evaluation)
+     
+## sl4j
+  - sl4j is a facade which can work with either log4j, logback or Java logging API.
+  - sl4j-api.jar + (specific logging framework jar) 
+     
+     
+     
     
     
     
