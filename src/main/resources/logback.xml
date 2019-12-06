@@ -1,0 +1,29 @@
+<configuration scan="true">
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/Users/emathur/mrepo/mlog/log.out</file>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			 <level>INFO</level>
+		      <onMatch>ACCEPT</onMatch>
+		      <onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${CCBU_CC_HOME}/logs/cuic/cuic-auth-CCBU.%i.log.zip
+			</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>20</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>5MB</maxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<pattern>%date{MMM dd yyyy HH:mm:ss.SSS Z}: \%%contextName-%level-%logger{0}:\% %message %ex%n</pattern>
+		</encoder>
+	</appender>
+     <logger name="org.emathur.log.logback" level="TRACE">
+    	<appender-ref ref="FILE"/>
+    </logger>
+    <root level="TRACE">
+    	<appender-ref ref="FILE"/>
+    </root>
+</configuration>
