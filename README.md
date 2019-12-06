@@ -11,7 +11,7 @@
     - layouts: Responsible for formatting logging information in different styles.
     
 ## logback
-   - https://www.mkyong.com/logging/logback-xml-example/
+   - https://stackify.com/logging-logback/
     
     
     
