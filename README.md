@@ -9,4 +9,10 @@
     - loggers: Responsible for capturing logging information.
     - appenders: Responsible for publishing logging information to various preferred destinations.
     - layouts: Responsible for formatting logging information in different styles.
+    
+## logback
+   - https://www.mkyong.com/logging/logback-xml-example/
+    
+    
+    
 
